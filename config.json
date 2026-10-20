@@ -1,0 +1,31 @@
+{
+    "llm": {
+        "provider": "auto",
+        "api_key": "4e0c648025114ab0bdad5f014719f5d4.PDfGwG6jD3Wh6hO9",
+        "base_url": "https://open.bigmodel.cn/api/paas/v4",
+        "model": "glm-4.6v",
+        "temperature": 0.7,
+        "system_prompt": "你是一个名叫小蓝的桌面办公助手。你可以帮助用户打开各种应用程序、查询信息、执行桌面操作，还可以调用远程MCP服务器上的工具。请用简洁友好的中文回复。当用户要求执行具体操作时，请调用对应的工具。"
+    },
+    "mcp": {
+        "enabled": true,
+        "servers": [
+            {
+                "name": "desktop_assistant",
+                "type": "local",
+                "description": "本地桌面操作工具集（打开应用、查询时间等）"
+            },
+            {
+                "name": "my_remote_mcp",
+                "type": "remote",
+                "url": "http://eastyell.vicp.net:42947/mcp",
+                "description": "远程 MCP 服务器"
+            }
+        ]
+    },
+    "features": {
+        "ai_mode": true,
+        "show_thinking": true,
+        "max_tool_rounds": 5
+    }
+}
